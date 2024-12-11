@@ -9,7 +9,7 @@ class DBConnect
 
     private string $host = 'localhost';
 
-    private string $dbname = 'ocr-p5';
+    private string $dbname = 'ocr-p5-exo';
 
     private string $user = 'root';
     private string $password = '';

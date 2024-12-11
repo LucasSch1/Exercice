@@ -2,10 +2,10 @@
 require_once 'Command.php';
 
 while (true) {
-    $pattern = '/^detail (\d+)$/';
-    $patternCreate = '/^create ([^,]+),\s*([^,]+),\s*(\d+)$/';
-    $patternModify = '/^modify (\d+),\s*([^,]+),\s*([^,]+),\s*(\d+)$/';
-    $patternDelete = '/^delete (\d+)$/';
+    $pattern = '/^detail (.*)$/'; // Pattern de détails d’un élément avec un ID numérique.
+    $patternCreate = '/^create (.*), (.*), (.*)$/'; //Pattern de création d'un élément avec un nom, une description et un nombre entier.
+    $patternModify = '/^modify (.*), (.*), (.*), (.*)$/'; //Pattern de modification d'un élément en indiquant un ID, deux noms et un nombre entier.
+    $patternDelete = '/^delete (.*)$/'; //Pattern de suppression d'un  élément avec un ID numérique
     $line = readline("Entrez votre commande (help, list, detail, create, delete, quit):");
     $command = new Command();
 
